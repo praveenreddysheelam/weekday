@@ -50,7 +50,6 @@ const JobCard = (props) => {
         href="/"
         className="bg-blue-700 w-full font-semibold text-white py-2  text-center rounded-md inline-block mt-2 "
       >
-        
         Unlock Referral asks
       </a>
       </div>
