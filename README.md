@@ -25,3 +25,5 @@
            -Minimum Experience 
            -Easy Apply Button
            -Referral BUtton 
+-- Use Redux Store also instead of react hooks 
+      -- As per given assignment application is of less complexity so react hooks give better performance comparitively .

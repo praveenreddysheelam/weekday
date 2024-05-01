@@ -95,14 +95,24 @@ const Body = () => {
     }
   return (
     <div>
-    <div className='flex m-4 p-4 '>
-         
-        <Select name='role' placeholder="Roles" onChange={handleChange} options={job_options} isMulti />
-        <Select name='location' placeholder="Location" onChange={handleChange} className='mx-2 px-2 ' options={location_options} isMulti />
-        <Select name='employeecount' placeholder="Number of Employees" className='mx-2 px-2 ' options={numberOfEmployees}   />
-        <Select name='experience' placeholder="Experience" className='mx-2 px-2 ' options={experience} onChange={handleChange}   isClearable={true}/>
-        <Select name='basesalary' placeholder="Min Base Salary" className='mx-2 px-2 ' onChange={handleChange} options={minBaseSalary}   isClearable={true}/>
-    </div>
+   <div className='flex flex-wrap m-4 p-4 '>
+  <div className="w-full md:w-1/2 lg:w-1/4 xl:w-1/5 mb-4 md:mb-0 lg:mb-0 xl:mb-0">
+    <Select name='role' placeholder="Roles" onChange={handleChange} options={job_options} isMulti />
+  </div>
+  <div className="w-full md:w-1/2 lg:w-1/4 xl:w-1/5 mb-4 md:mb-0 lg:mb-0 xl:mb-0">
+    <Select name='location' placeholder="Location" onChange={handleChange} className='mx-2 px-2 ' options={location_options} isMulti />
+  </div>
+  <div className="w-full md:w-1/2 lg:w-1/4 xl:w-1/5 mb-4 md:mb-0 lg:mb-0 xl:mb-0">
+    <Select name='employeecount' placeholder="Number of Employees" className='mx-2 px-2 ' options={numberOfEmployees}   />
+  </div>
+  <div className="w-full md:w-1/2 lg:w-1/4 xl:w-1/5 mb-4 md:mb-0 lg:mb-0 xl:mb-0">
+    <Select name='experience' placeholder="Experience" className='mx-2 px-2 ' options={experience} onChange={handleChange}   isClearable={true}/>
+  </div>
+  <div className="w-full md:w-1/2 lg:w-1/4 xl:w-1/5 mb-4 md:mb-0 lg:mb-0 xl:mb-0">
+    <Select name='basesalary' placeholder="Min Base Salary" className='mx-2 px-2 ' onChange={handleChange} options={minBaseSalary}   isClearable={true}/>
+  </div>
+</div>
+
     <div className='flex flex-wrap '>{ filteredJobs && 
         filteredJobs.map((job)=> <div key={job.jdUid} className="max-w-md mx-2 mb-4">
         <JobCard  jobData={job}></JobCard>
