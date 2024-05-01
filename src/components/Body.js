@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Select from 'react-select'
 const Body = () => {
+    const [listOfJobs,setListOfJobs]=useState(null);
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");  
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+       };
+    const fetchData= async () =>{
+        const data =await fetch("https://api.weekday.technology/adhoc/getSampleJdJSON", requestOptions);
+        const json= await data.json();
+        setListOfJobs(json?.jdList);
+    }
+    useEffect(()=>{
+        fetchData();
+    },[]);
     const job_options=[{ value: 'frontend', label: 'FrontEnd' },
     { value: 'backend', label: 'BackEnd' },
     { value: 'android', label: 'Android' },
