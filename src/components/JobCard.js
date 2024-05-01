@@ -7,7 +7,7 @@ const JobCard = (props) => {
     setExpanded(!expanded);
     }
     const jobData=props.jobData;
-    const {jobDetailsFromCompany,location,jobRole}=jobData;
+    const {jobDetailsFromCompany,location,jobRole,minJdSalary,maxJdSalary,minExp,maxExp}=jobData;
     const Capitalize= (str)=> {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
@@ -22,6 +22,7 @@ const JobCard = (props) => {
       </div>
     </div>
     <div className="flex-grow"> 
+      <h3 className='text-gray-600 mt -2 '>Estimated Salary:   {minJdSalary?minJdSalary:0} - {maxJdSalary?maxJdSalary:"NA"}k USD ✅</h3>
       <div  className=''>
        <h3 className='font-semibold mt-4'> About Company </h3>
        <h4 className='font-semibold'> About us</h4>
@@ -35,7 +36,8 @@ const JobCard = (props) => {
           {expanded ? 'Show Less' : 'View Job'}
         </button>
       )}
-      <p className="text-gray-600">Experience Required: Not Given</p>
+      <p className="text-gray-600 font-semibold ">Minimum Experience</p>
+      <h3>{minExp?minExp:0} years </h3>
       <div className='mt-4 flex justify-center'>
       <a
         href="/"
