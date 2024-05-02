@@ -1,18 +1,17 @@
+# How to run this run this project 
+    - Clone a repository from github(git clone https://github.com/praveenreddysheelam/weekday.git)
+    -navigate to repository folder (cd weekday)
+    -npm install to install dependencies
+    - npm start to run this project
 # create react app 
-     ```js
       npx create-react-app weekday 
-     ```
 # setup redux
-    ```js
     --npm install react-redux 
     --npm install @reduxjs/toolkit
-   ```
-- Install and init tailwind css
+# Install and init tailwind css
+   -- npm install -D tailwindcss
+  -- npx tailwindcss init
 
-```js
-npm install -D tailwindcss
-npx tailwindcss init
-```
 
 - Configure tailwind css in your project
 
@@ -43,9 +42,6 @@ module.exports = {
 ```js
 npm start
 ```
-# How to run this run this project 
-    - Clone a repository from github(gh repo clone praveenreddysheelam/weekday)
-    - npm start to run this project
 # Development 
     -Header(Based on api selecting filters )
       -Role (frontend,backend,techlead,andriod,ios)--> drop down with multiple item selection
