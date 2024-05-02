@@ -1,19 +1,19 @@
 # create react app 
-     ```
-     -- npx create-react-app weekday 
+     ```js
+      npx create-react-app weekday 
      ```
 # setup redux
-    ```
+    ```js
     --npm install react-redux 
     --npm install @reduxjs/toolkit
     ```
 # setup tailwindcss 
-    ```
+    ```js
    --npm install -D tailwindcss
    --npx tailwindcss init
    ```
    Configure tailwind css in your project npx tailwindcss init command will create a file tailwind.config.js in your project's root directory. Open tailwind.config.js and replace all content with below code.
-   ```
+   ```js
    module.exports = {
    content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -23,7 +23,7 @@
     };
 ```
    Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
- ```
+ ```js
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
