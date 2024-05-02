@@ -1,11 +1,36 @@
 # create react app 
+     ```
      -- npx create-react-app weekday 
+     ```
 # setup redux
+    ```
     --npm install react-redux 
     --npm install @reduxjs/toolkit
+    ```
 # setup tailwindcss 
+    ```
    --npm install -D tailwindcss
    --npx tailwindcss init
+   ```
+   Configure tailwind css in your project npx tailwindcss init command will create a file tailwind.config.js in your project's root directory. Open tailwind.config.js and replace all content with below code.
+   ```
+   module.exports = {
+   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+    };
+```
+   Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+ ```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ ```
+# How to run this run this project 
+    - Clone a repository from github(gh repo clone praveenreddysheelam/weekday)
+    - npm start to run this project
 # Development 
     -Header(Based on api selecting filters )
       -Role (frontend,backend,techlead,andriod,ios)--> drop down with multiple item selection
@@ -27,3 +52,4 @@
            -Referral BUtton 
 -- Use Redux Store also instead of react hooks 
       -- As per given assignment application is of less complexity so react hooks give better performance comparitively .
+

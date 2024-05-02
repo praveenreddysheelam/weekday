@@ -112,7 +112,6 @@ const Body = () => {
     <Select name='basesalary' placeholder="Min Base Salary" className='mx-2 px-2 ' onChange={handleChange} options={minBaseSalary}   isClearable={true}/>
   </div>
 </div>
-
     <div className='flex flex-wrap '>{ filteredJobs && 
         filteredJobs.map((job)=> <div key={job.jdUid} className="max-w-md mx-2 mb-4">
         <JobCard  jobData={job}></JobCard>
