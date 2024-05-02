@@ -6,28 +6,43 @@
     ```js
     --npm install react-redux 
     --npm install @reduxjs/toolkit
-    ```
-# setup tailwindcss 
-    ```js
-   --npm install -D tailwindcss
-   --npx tailwindcss init
    ```
-   Configure tailwind css in your project npx tailwindcss init command will create a file tailwind.config.js in your project's root directory. Open tailwind.config.js and replace all content with below code.
-   ```js
-   module.exports = {
-   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+- Install and init tailwind css
+
+```js
+npm install -D tailwindcss
+npx tailwindcss init
+```
+
+- Configure tailwind css in your project
+
+  `npx tailwindcss init` command will create a file `tailwind.config.js` in your project's root directory.
+  Open `tailwind.config.js` and replace all content with below code.
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [],
-    };
+};
 ```
-   Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
- ```js
+
+- Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- ```
+```
+
+- Now you created a react app with tailwind css successfully. Now run the below command on your terminal to start your local development server.
+
+```js
+npm start
+```
 # How to run this run this project 
     - Clone a repository from github(gh repo clone praveenreddysheelam/weekday)
     - npm start to run this project
